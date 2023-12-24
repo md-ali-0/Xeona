@@ -9,13 +9,13 @@ const Login = () => {
                 <form>
                     <div className="bg-white px-10 py-5 rounded-xl w-screen shadow-md max-w-sm">
                         <div className="space-y-4">
-                            <div className="space-y-2">
-                                <h1 className="text-center text-2xl font-semibold text-gray-600">
-                                    Welcome Back !
+                            <div className="text-center space-y-2">
+                                <h1 className="text-xl font-semibold">
+                                    Welcome back
                                 </h1>
-                                <h4 className="text-sm text-center text-gray-500">
-                                    Welcome back, please login to your account.
-                                </h4>
+                                <small className="text-gray-400">
+                                    Welcome back! Please enter your details
+                                </small>
                             </div>
                             <div>
                                 <label
