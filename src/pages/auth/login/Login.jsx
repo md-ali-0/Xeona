@@ -1,20 +1,31 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { GoInfo } from "react-icons/go";
 import { Link } from "react-router-dom";
 
 const Login = () => {
     const [passwordShow, setPasswordShow] = useState(false);
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
+    const onSubmit = (data) => {
+        console.log(data);
+    };
     return (
         <>
-            <div className="h-screen flex justify-center items-center w-full">
-                <form>
-                    <div className="bg-white px-10 py-5 rounded-xl w-screen shadow-md max-w-sm">
+            <div className="flex justify-center items-center w-full h-screen">
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className="bg-white dark:bg-gray-900 px-10 py-5 rounded-xl w-screen shadow-md max-w-sm">
                         <div className="space-y-4">
                             <div className="text-center space-y-2">
                                 <h1 className="text-xl font-semibold">
                                     Welcome back
                                 </h1>
-                                <small className="text-gray-400">
-                                    Welcome back! Please enter your details
+                                <small className="text-gray-400 dark:text-gray-200">
+                                    Sign in to your account to start using
+                                    ZenithUI
                                 </small>
                             </div>
                             <div>
@@ -26,27 +37,51 @@ const Login = () => {
                                 </label>
                                 <input
                                     type="text"
-                                    className="w-full rounded-lg border border-stroke bg-transparent py-2 px-3 outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokeDark dark:bg-form-input"
+                                    id="email"
+                                    {...register("email", {
+                                        required: "Email is Required",
+                                    })}
+                                    className={`w-full rounded-lg border border-stroke bg-transparent py-2 px-3 outline-none text-gray-600 focus-visible:shadow-none dark:border-form-strokeDark dark:bg-form-input ${
+                                        errors.email
+                                            ? "border-red-500 focus:border-red-500"
+                                            : "focus:border-primary"
+                                    }
+                                    `}
                                     placeholder="Enter Email Address"
                                 />
+                                {errors.email && (
+                                    <span className="flex items-center gap-1 py-1 text-red-500">
+                                        <GoInfo className="inline" />
+                                        {errors.email.message}
+                                    </span>
+                                )}
                             </div>
                             <div className="relative">
                                 <label
-                                    htmlFor="email"
+                                    htmlFor="password"
                                     className="block mb-1 text-gray-600 text-sm font-medium"
                                 >
                                     Password
                                 </label>
                                 <input
                                     type={passwordShow ? "text" : "password"}
-                                    className="w-full rounded-lg border border-stroke bg-transparent py-2 px-3 outline-none focus:border-primary focus-visible:shadow-none dark:border-form-strokeDark dark:bg-form-input"
+                                    id="password"
+                                    {...register("password", {
+                                        required: "Password is Required",
+                                    })}
+                                    className={`w-full rounded-lg border border-stroke bg-transparent py-2 px-3 outline-none text-gray-600 focus-visible:shadow-none dark:border-form-strokeDark dark:bg-form-input ${
+                                        errors.password
+                                            ? "border-red-500 focus:border-red-500"
+                                            : "focus:border-primary"
+                                    }
+                                    `}
                                     placeholder="Enter Password"
                                 />
                                 <span
                                     onClick={() =>
                                         setPasswordShow(!passwordShow)
                                     }
-                                    className="absolute top-10 right-5 cursor-pointer"
+                                    className="absolute top-[38px] text-gray-500 right-3 cursor-pointer select-none"
                                 >
                                     {passwordShow ? (
                                         <svg
@@ -89,6 +124,12 @@ const Login = () => {
                                         </svg>
                                     )}
                                 </span>
+                                {errors.password && (
+                                    <span className="flex items-center gap-1 py-1 text-red-500">
+                                        <GoInfo className="inline" />
+                                        {errors.password.message}
+                                    </span>
+                                )}
                             </div>
                         </div>
                         <button className="mt-4 w-full bg-primary text-white py-2 rounded-md text-md tracking-wide">
@@ -145,7 +186,7 @@ const Login = () => {
                                 Don’t have an account yet?
                                 <Link
                                     to="/register"
-                                    className="font-medium text-blue-600 hover:text-blue-400 dark:text-blue-400 dark:hover:text-blue-300"
+                                    className="font-medium text-primary hover:text-blue-400 dark:text-blue-400 dark:hover:text-blue-300"
                                 >
                                     <span className="px-1 font-bold">
                                         Sign Up
