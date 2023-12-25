@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { GoInfo } from "react-icons/go";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
     const [passwordShow, setPasswordShow] = useState(false);
+    const navigation = useNavigate()
     const {
         register,
         handleSubmit,
@@ -12,6 +13,7 @@ const Register = () => {
     } = useForm();
     const onSubmit = (data) => {
         console.log(data);
+        navigation('/dashboard')
     };
     return (
         <>
@@ -210,7 +212,7 @@ const Register = () => {
                                 </button>
                             </div>
                             <div className="p-5 text-sm text-center">
-                                Already registered?
+                                Already have an account?
                                 <Link
                                     to="/login"
                                     className="font-medium text-primary hover:text-blue-400 dark:text-blue-400 dark:hover:text-blue-300"

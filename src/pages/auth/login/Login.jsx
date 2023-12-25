@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { GoInfo } from "react-icons/go";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [passwordShow, setPasswordShow] = useState(false);
+    const navigation = useNavigate()
     const {
         register,
         handleSubmit,
@@ -12,6 +13,7 @@ const Login = () => {
     } = useForm();
     const onSubmit = (data) => {
         console.log(data);
+        navigation('/dashboard')
     };
     return (
         <>
