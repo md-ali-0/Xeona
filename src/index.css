@@ -1,3 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+}
+
+@layer components {
+    .sideLink {
+        @apply flex items-center gap-2 hover:no-underline text-neutral-400 py-2 px-1.5;
+    }
+    .sideLinkActive {
+        @apply flex items-center gap-2 hover:no-underline bg-[#1E293B] rounded text-white py-2 px-1.5;
+    }
+    .dropdownSideBar {
+        @apply relative flex items-center gap-2 hover:no-underline rounded text-neutral-400 py-2 px-1.5 w-full;
+    }
+}

@@ -10,6 +10,9 @@ export default {
       colors: {
         'primary': "#007FEC",
         'body': "#F9F9FB"
+      },
+      fontFamily: {
+        'Nunito': "Nunito, sans-serif"
       }
     },
   },
