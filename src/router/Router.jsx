@@ -4,6 +4,7 @@ import Main from "../layout/Main/Main";
 import Login from "../pages/auth/login/Login";
 import Register from "../pages/auth/register/Register";
 import Button from "../pages/dashboard/common/Button";
+import Widgets from "../pages/dashboard/common/Widgets";
 import DashboardHome from "../pages/dashboard/home/DashboardHome";
 import Home from "../pages/home/Home";
 
@@ -37,6 +38,10 @@ const Router = createBrowserRouter([
             {
                 path: 'button',
                 element: <Button/>
+            },
+            {
+                path: 'widgets',
+                element: <Widgets/>
             }
         ]
     },

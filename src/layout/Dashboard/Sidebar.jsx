@@ -50,6 +50,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                             subMenu={[
                                 { name: "Button", path: "button" },
                                 { name: "Grid", path: "grid" },
+                                { name: "Widgets", path: "widgets" },
                                 { name: "Icons", path: "icons" },
                             ]}
                         ></SidebarSubMenu>
