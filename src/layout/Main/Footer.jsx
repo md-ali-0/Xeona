@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo/logo.png";
 
 const Footer = () => {
@@ -14,25 +15,25 @@ const Footer = () => {
                         role="list"
                         className="flex flex-col items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8"
                     >
-                        <li role="listitem">
-                            <a href="#" className="hover:text-primary">
+                        <li>
+                            <Link href="#" className="hover:text-primary">
                                 Home
-                            </a>
+                            </Link>
                         </li>
-                        <li role="listitem">
-                            <a href="#" className="hover:text-primary">
+                        <li>
+                            <Link href="#" className="hover:text-primary">
                                 Features
-                            </a>
+                            </Link>
                         </li>
-                        <li role="listitem">
-                            <a href="#" className="hover:text-primary">
+                        <li>
+                            <Link href="#" className="hover:text-primary">
                                 Get started
-                            </a>
+                            </Link>
                         </li>
-                        <li role="listitem">
-                            <a href="#" className="hover:text-primary">
+                        <li>
+                            <Link href="#" className="hover:text-primary">
                                 About us
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                     <div className="m-auto flex w-max items-center justify-between space-x-4">
