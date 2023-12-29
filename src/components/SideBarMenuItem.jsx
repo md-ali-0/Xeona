@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const SideBarMenuItem = ({ menu }) => {
     const { name, icon, path } = menu;
     return (
-        <li className="py-1">
+        <li className="py-0.5">
             <NavLink
                 to={path}
                 className={({ isActive }) =>

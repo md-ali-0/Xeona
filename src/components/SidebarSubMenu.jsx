@@ -38,7 +38,7 @@ const SidebarSubMenu = ({ menu, subMenu }) => {
                     dropdownOpen ? "block" : "hidden"
                 }`}
             >
-                <ul className="flex flex-col gap-2.5 my-2 px-3.5 overflow-hidden">
+                <ul className="flex flex-col my-1 px-3.5 overflow-hidden">
                     {subMenu.map((item, idx) => (
                         <li key={idx}>
                             <NavLink
@@ -49,19 +49,19 @@ const SidebarSubMenu = ({ menu, subMenu }) => {
                             >
                                 <svg
                                     stroke="currentColor"
-                                    fill="currentColor"
+                                    fill="none"
                                     strokeWidth="0"
-                                    viewBox="0 0 24 24"
-                                    className="inline"
-                                    height="14"
-                                    width="14"
+                                    viewBox="0 0 15 15"
+                                    height="1em"
+                                    width="1em"
                                     xmlns="http://www.w3.org/2000/svg"
                                 >
                                     <path
-                                        fill="none"
-                                        d="M0 0h24v24H0V0z"
+                                        fillRule="evenodd"
+                                        clipRule="evenodd"
+                                        d="M7.5 9.125C8.39746 9.125 9.125 8.39746 9.125 7.5C9.125 6.60254 8.39746 5.875 7.5 5.875C6.60254 5.875 5.875 6.60254 5.875 7.5C5.875 8.39746 6.60254 9.125 7.5 9.125ZM7.5 10.125C8.94975 10.125 10.125 8.94975 10.125 7.5C10.125 6.05025 8.94975 4.875 7.5 4.875C6.05025 4.875 4.875 6.05025 4.875 7.5C4.875 8.94975 6.05025 10.125 7.5 10.125Z"
+                                        fill="currentColor"
                                     ></path>
-                                    <path d="M6.23 20.23L8 22l10-10L8 2 6.23 3.77 14.46 12z"></path>
                                 </svg>
                                 {item.name}
                             </NavLink>

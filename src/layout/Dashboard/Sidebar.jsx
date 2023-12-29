@@ -25,6 +25,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                 </div>
                 <nav className="mt-5 px-3">
                     <ul>
+                        <h4 className="text-gray-400 font-semibold text-xs mb-1">
+                            Main
+                        </h4>
                         <SideBarMenuItem
                             menu={{
                                 name: "Dashboard",
@@ -39,40 +42,25 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                 path: "/",
                             }}
                         />
-                        <SideBarMenuItem
-                            menu={{
-                                name: "Forms",
-                                icon: "LuCommand",
-                                path: "/",
-                            }}
-                        />
-                        <SideBarMenuItem
-                            menu={{
-                                name: "Settings",
-                                icon: "LuCommand",
-                                path: "/",
-                            }}
-                        />
-
+                        <h4 className="text-gray-400 font-semibold text-xs mt-2">
+                            UI Components
+                        </h4>
                         <SidebarSubMenu
-                            menu={{ name: "Authentication", icon: "LuUser2" }}
+                            menu={{ name: "Common", icon: "LuAtom" }}
                             subMenu={[
-                                { name: "SignIn", path: "/login" },
-                                { name: "SignUp", path: "/register" },
+                                { name: "Button", path: "button" },
+                                { name: "Grid", path: "grid" },
+                                { name: "Icons", path: "icons" },
                             ]}
                         ></SidebarSubMenu>
                         <SidebarSubMenu
-                            menu={{ name: "Authentication", icon: "LuUser2" }}
+                            menu={{ name: "Feedback", icon: "LuBringToFront" }}
                             subMenu={[
-                                { name: "SignIn", path: "/login" },
-                                { name: "SignUp", path: "/register" },
-                            ]}
-                        ></SidebarSubMenu>
-                        <SidebarSubMenu
-                            menu={{ name: "Authentication", icon: "LuUser2" }}
-                            subMenu={[
-                                { name: "SignIn", path: "/login" },
-                                { name: "SignUp", path: "/register" },
+                                { name: "Alert", path: "button" },
+                                { name: "Dialog", path: "grid" },
+                                { name: "Progress", path: "icons" },
+                                { name: "Spinner", path: "icons" },
+                                { name: "Toast", path: "icons" },
                             ]}
                         ></SidebarSubMenu>
                     </ul>
