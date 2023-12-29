@@ -1,9 +1,13 @@
 import { Outlet } from "react-router-dom";
+import Header from "./Header";
 
 const Main = () => {
     return (
         <>
-            <Outlet/>
+            <Header />
+            <main className="pt-24 md:pt-0">
+                <Outlet />
+            </main>
         </>
     );
 };

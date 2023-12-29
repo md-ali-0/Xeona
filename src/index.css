@@ -11,6 +11,15 @@
 }
 
 @layer components {
+    .navbar-active .hamburger div:first-child {
+        @apply rotate-45 translate-y-1.5;
+    }
+    .navbar-active .hamburger div:last-child {
+        @apply -rotate-45 -translate-y-1;
+    }
+    .navbar-active div:first-child div:first-child div:last-child {
+        @apply block lg:flex;
+    }
     .sideLink {
         @apply flex items-center gap-2 hover:no-underline text-neutral-400 py-2 px-1.5;
     }
