@@ -4,7 +4,7 @@ const DashboardHome = () => {
     return (
         <>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 xl:grid-cols-4 2xl:gap-7">
-                <div className="flex justify-between items-center rounded border bg-white py-6 px-7 shadow">
+                <div className="flex justify-between items-center rounded-md bg-white py-6 px-7 shadow">
                     <div className="flex items-center justify-center rounded-md bg-indigo-100 py-3.5 px-3">
                         <HiOutlineEye className="text-indigo-500" size={30} />
                     </div>
@@ -17,7 +17,7 @@ const DashboardHome = () => {
                         </span>
                     </div>
                 </div>
-                <div className="flex justify-between items-center rounded border bg-white py-6 px-7 shadow">
+                <div className="flex justify-between items-center rounded-md bg-white py-6 px-7 shadow">
                     <div className="flex items-center justify-center rounded-md bg-green-100 py-3.5 px-3">
                         <HiOutlineClock className="text-green-600" size={30} />
                     </div>
@@ -30,7 +30,7 @@ const DashboardHome = () => {
                         </span>
                     </div>
                 </div>
-                <div className="flex justify-between items-center rounded border bg-white py-6 px-7 shadow">
+                <div className="flex justify-between items-center rounded-md bg-white py-6 px-7 shadow">
                     <div className="flex items-center justify-center rounded-md bg-blue-100 py-3.5 px-3">
                         <HiOutlineChartPie className="text-primary" size={30} />
                     </div>
@@ -43,7 +43,7 @@ const DashboardHome = () => {
                         </span>
                     </div>
                 </div>
-                <div className="flex justify-between items-center rounded border bg-white py-6 px-7 shadow">
+                <div className="flex justify-between items-center rounded-md bg-white py-6 px-7 shadow">
                     <div className="flex items-center justify-center rounded-md bg-amber-100 py-3.5 px-3">
                         <HiOutlineUser className="text-amber-600" size={30} />
                     </div>
