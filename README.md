@@ -33,9 +33,7 @@ We welcome contributions! If you'd like to contribute to Xeona Admin Dashboard, 
 4. Push to the branch: `git push origin feature/your-feature-name`
 5. Submit a pull request.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
