@@ -32,7 +32,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }) => {
                                 menu={{
                                     name: "Dashboard",
                                     icon: "LuCommand",
-                                    path: "/dashboard/home",
+                                    path: "/dashboard",
                                 }}
                             />
                             <SideBarMenuItem
